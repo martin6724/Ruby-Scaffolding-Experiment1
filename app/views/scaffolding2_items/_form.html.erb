@@ -1,0 +1,22 @@
+<%= form_with(model: scaffolding2_item, local: true) do |form| %>
+  <% if scaffolding2_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scaffolding2_item.errors.count, "error") %> prohibited this scaffolding2_item from being saved:</h2>
+
+      <ul>
+      <% scaffolding2_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

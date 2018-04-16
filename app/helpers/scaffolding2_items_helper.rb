@@ -1,0 +1,2 @@
+module Scaffolding2ItemsHelper
+end
